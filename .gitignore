@@ -21,3 +21,5 @@ exports/**/.*hf-transaction*/
 **/stems/
 tools/hyperframes/*/lyrics_dp.json
 **/render-v2.log
+films/*/out/
+films/*/stills/
