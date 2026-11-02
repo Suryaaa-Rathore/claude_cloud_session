@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "historyId": "d73d4e81-6b04-496c-b559-f75ee3bbbff6",
+  "currentRevision": null,
+  "pendingChanges": false,
+  "files": {
+    "AGENTS.md": {
+      "hash": "1b36171117cb7c18f4100a0db6a3782ff2e096115995733200445cc2e80a4060",
+      "content": "/root/.cache/hyperframes/history/d73d4e81-6b04-496c-b559-f75ee3bbbff6/blobs/1b/1b36171117cb7c18f4100a0db6a3782ff2e096115995733200445cc2e80a4060"
+    },
+    "CLAUDE.md": {
+      "hash": "1b36171117cb7c18f4100a0db6a3782ff2e096115995733200445cc2e80a4060",
+      "content": "/root/.cache/hyperframes/history/d73d4e81-6b04-496c-b559-f75ee3bbbff6/blobs/1b/1b36171117cb7c18f4100a0db6a3782ff2e096115995733200445cc2e80a4060"
+    },
+    "assets/gsap.min.js": {
+      "hash": "92bb9a96476f983d212a2bc4f54c889039c1696dd4461d40a736860938570fbb",
+      "content": "/root/.cache/hyperframes/history/d73d4e81-6b04-496c-b559-f75ee3bbbff6/blobs/92/92bb9a96476f983d212a2bc4f54c889039c1696dd4461d40a736860938570fbb"
+    },
+    "hyperframes.json": {
+      "hash": "53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50",
+      "content": "/root/.cache/hyperframes/history/d73d4e81-6b04-496c-b559-f75ee3bbbff6/blobs/53/53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50"
+    },
+    "index.html": {
+      "hash": "2a77834494bcfa5bf0d9c330c59f50f3c26c2bc180f3db80c828b7056d4c6bbf",
+      "content": "/root/.cache/hyperframes/history/d73d4e81-6b04-496c-b559-f75ee3bbbff6/blobs/2a/2a77834494bcfa5bf0d9c330c59f50f3c26c2bc180f3db80c828b7056d4c6bbf"
+    },
+    "meta.json": {
+      "hash": "201efa83212599a3364f6f3ca329bdebf4177cf4279489453f2b9f4857e5b834",
+      "content": "/root/.cache/hyperframes/history/d73d4e81-6b04-496c-b559-f75ee3bbbff6/blobs/20/201efa83212599a3364f6f3ca329bdebf4177cf4279489453f2b9f4857e5b834"
+    },
+    "package.json": {
+      "hash": "5596caf85f1768a1126b2b6147534d3a1c7503476f8cd211489475464b696ce7",
+      "content": "/root/.cache/hyperframes/history/d73d4e81-6b04-496c-b559-f75ee3bbbff6/blobs/55/5596caf85f1768a1126b2b6147534d3a1c7503476f8cd211489475464b696ce7"
+    }
+  },
+  "revisions": {},
+  "checks": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "snapshots": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "renders": {
+    "latest": {
+      "id": "1a783d3b-f253-40a7-9274-eb272d93f2a9",
+      "completedAt": 1793616339786,
+      "output": "/home/user/claude_cloud_session/exports/_tests/hyperframes-test.mp4",
+      "status": "completed",
+      "revision": null
+    },
+    "retainedRevisions": []
+  },
+  "pendingArtifactCleanup": []
+}

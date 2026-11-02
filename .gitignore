@@ -6,3 +6,8 @@
 *.mxf
 *.wav
 *.mp3
+
+# Tool dependencies (restored by tools/setup.sh)
+node_modules/
+tools/hyperframes/studio-test/assets/gsap.min.js
+renders/
