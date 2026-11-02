@@ -10,6 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fontsource/noto-sans-malayalam": "^5.3.0",
+    "@fontsource/poppins": "^5.3.0",
+    "@fontsource/yellowtail": "^5.3.0",
     "gsap": "^3.15.0",
     "hyperframes": "^0.9.2"
   }

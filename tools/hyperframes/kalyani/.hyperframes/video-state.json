@@ -1,0 +1,249 @@
+{
+  "version": 1,
+  "historyId": "4219819e-8369-41d5-a56a-8fc84de91e0f",
+  "currentRevision": null,
+  "pendingChanges": false,
+  "files": {
+    "assets/fonts/noto-sans-malayalam-malayalam-500-normal.woff2": {
+      "hash": "09d70b2206b490601499e762aa53d6d6496c46a6e903654445edab1da9965d2c",
+      "content": "/root/.cache/hyperframes/history/4219819e-8369-41d5-a56a-8fc84de91e0f/blobs/09/09d70b2206b490601499e762aa53d6d6496c46a6e903654445edab1da9965d2c"
+    },
+    "assets/fonts/noto-sans-malayalam-malayalam-700-normal.woff2": {
+      "hash": "efa8853223b300f62694dd5bd36066742e9bb556297db983deae3e88329ea503",
+      "content": "/root/.cache/hyperframes/history/4219819e-8369-41d5-a56a-8fc84de91e0f/blobs/ef/efa8853223b300f62694dd5bd36066742e9bb556297db983deae3e88329ea503"
+    },
+    "assets/fonts/poppins-latin-400-normal.woff2": {
+      "hash": "7d93459d86585bfcdbb7e0376056226adb25821ee54b96236fe2123e9560929f",
+      "content": "/root/.cache/hyperframes/history/4219819e-8369-41d5-a56a-8fc84de91e0f/blobs/7d/7d93459d86585bfcdbb7e0376056226adb25821ee54b96236fe2123e9560929f"
+    },
+    "assets/fonts/poppins-latin-600-normal.woff2": {
+      "hash": "f4e80d9dfd374d02989b87a27b5ed4cb78fbb177c27f1478e9a8b0afb7513149",
+      "content": "/root/.cache/hyperframes/history/4219819e-8369-41d5-a56a-8fc84de91e0f/blobs/f4/f4e80d9dfd374d02989b87a27b5ed4cb78fbb177c27f1478e9a8b0afb7513149"
+    },
+    "assets/fonts/poppins-latin-800-normal.woff2": {
+      "hash": "60bf0aba6526436f3930c58c12047687fbb6bff4dd180cce4613458ed3439ea2",
+      "content": "/root/.cache/hyperframes/history/4219819e-8369-41d5-a56a-8fc84de91e0f/blobs/60/60bf0aba6526436f3930c58c12047687fbb6bff4dd180cce4613458ed3439ea2"
+    },
+    "assets/fonts/yellowtail-latin-400-normal.woff2": {
+      "hash": "78f5413a0d04f3331122d49f10507a6c290afe4d441fc49a968c7779331aedb4",
+      "content": "/root/.cache/hyperframes/history/4219819e-8369-41d5-a56a-8fc84de91e0f/blobs/78/78f5413a0d04f3331122d49f10507a6c290afe4d441fc49a968c7779331aedb4"
+    },
+    "assets/gsap.min.js": {
+      "hash": "92bb9a96476f983d212a2bc4f54c889039c1696dd4461d40a736860938570fbb",
+      "content": "/root/.cache/hyperframes/history/4219819e-8369-41d5-a56a-8fc84de91e0f/blobs/92/92bb9a96476f983d212a2bc4f54c889039c1696dd4461d40a736860938570fbb"
+    },
+    "build.py": {
+      "hash": "ffad67d011a80bf0e4a6a6a3e61a094329c65c21f9f880c9866c70ff0ce531ba",
+      "content": "/root/.cache/hyperframes/history/4219819e-8369-41d5-a56a-8fc84de91e0f/blobs/ff/ffad67d011a80bf0e4a6a6a3e61a094329c65c21f9f880c9866c70ff0ce531ba"
+    },
+    "hyperframes.json": {
+      "hash": "53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50",
+      "content": "/root/.cache/hyperframes/history/4219819e-8369-41d5-a56a-8fc84de91e0f/blobs/53/53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50"
+    },
+    "index.html": {
+      "hash": "6c780d8b0628fdd4dacba6dc3da5c4dc8c98e1b5a2ff906d6fb309b501a7c44a",
+      "content": "/root/.cache/hyperframes/history/4219819e-8369-41d5-a56a-8fc84de91e0f/blobs/6c/6c780d8b0628fdd4dacba6dc3da5c4dc8c98e1b5a2ff906d6fb309b501a7c44a"
+    },
+    "lyrics.json": {
+      "hash": "5a228543fdd9ff9bdf87c12de3ae62ce85d14156a0194edbf4458cd402982f41",
+      "content": "/root/.cache/hyperframes/history/4219819e-8369-41d5-a56a-8fc84de91e0f/blobs/5a/5a228543fdd9ff9bdf87c12de3ae62ce85d14156a0194edbf4458cd402982f41"
+    },
+    "meta.json": {
+      "hash": "ecc6b69ffe3fababac7b315ea7befe5c5fed4117bbc32726a9ae0e9c48ae5e8b",
+      "content": "/root/.cache/hyperframes/history/4219819e-8369-41d5-a56a-8fc84de91e0f/blobs/ec/ecc6b69ffe3fababac7b315ea7befe5c5fed4117bbc32726a9ae0e9c48ae5e8b"
+    },
+    "package.json": {
+      "hash": "fc2830c41cb7d6274a1aa69e9d5770a2ad5df565dc2e718b7a07728ce7163cad",
+      "content": "/root/.cache/hyperframes/history/4219819e-8369-41d5-a56a-8fc84de91e0f/blobs/fc/fc2830c41cb7d6274a1aa69e9d5770a2ad5df565dc2e718b7a07728ce7163cad"
+    },
+    "song-analysis.json": {
+      "hash": "9aecd95a4cb0aee42e054ed3412373f5a65273f64cafc83b43d2cead4f72f900",
+      "content": "/root/.cache/hyperframes/history/4219819e-8369-41d5-a56a-8fc84de91e0f/blobs/9a/9aecd95a4cb0aee42e054ed3412373f5a65273f64cafc83b43d2cead4f72f900"
+    },
+    "assets/source.mp4": {
+      "hash": "4d9abeea51a2bacfb634f106989b454f10eea22e9a456248a0616afc621eada4",
+      "content": "/root/.cache/hyperframes/history/4219819e-8369-41d5-a56a-8fc84de91e0f/blobs/4d/4d9abeea51a2bacfb634f106989b454f10eea22e9a456248a0616afc621eada4"
+    },
+    "song.m4a": {
+      "hash": "3650ed673c24039fc16a133e9579a3174bd6f749ea8ffb68817112bdd61be4cd",
+      "content": "/root/.cache/hyperframes/history/4219819e-8369-41d5-a56a-8fc84de91e0f/blobs/36/3650ed673c24039fc16a133e9579a3174bd6f749ea8ffb68817112bdd61be4cd"
+    }
+  },
+  "revisions": {},
+  "checks": {
+    "latest": {
+      "revision": null,
+      "id": "dea0ec9b-2737-4918-9d71-1169927cbce1"
+    },
+    "revisions": {},
+    "unversioned": [
+      {
+        "id": "dea0ec9b-2737-4918-9d71-1169927cbce1",
+        "scope": "project",
+        "report": "/home/user/claude_cloud_session/tools/hyperframes/kalyani/.hyperframes/artifacts/checks/dea0ec9b-2737-4918-9d71-1169927cbce1.json",
+        "metadata": {
+          "ok": true,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 10000,
+            "contrast": true,
+            "strict": false,
+            "snapshots": false,
+            "browserGpuMode": "auto"
+          }
+        },
+        "createdAt": 1793617210909,
+        "contentHash": "bf0833cfbc25982f34a8f48b7cf13b71b7a4a82e070905b7757aa004189d5303",
+        "revision": null,
+        "inputFingerprint": "4c3f1d8bdf81d53be55a6a8ed8b8ada6590e6e880ca90575945a66e47a5764ab",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "snapshots": {
+    "latest": {
+      "revision": null,
+      "id": "a7cc50e0-c355-4eee-816a-ab786c963f51-5"
+    },
+    "revisions": {},
+    "unversioned": [
+      {
+        "scope": "full",
+        "id": "a7cc50e0-c355-4eee-816a-ab786c963f51-0",
+        "image": "/home/user/claude_cloud_session/tools/hyperframes/kalyani/.hyperframes/artifacts/snapshots/5d1f638b-2956-4ac7-9d76-ba6deee2b664/frame-00-at-5s.png",
+        "time": 5,
+        "metadata": {
+          "width": 1920,
+          "height": 1080,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1793617223009,
+        "contentHash": "49036ad9276b05da043d50ab8a501e02a222fa25916c0b98549bd75a424bb772",
+        "revision": null,
+        "inputFingerprint": "4c3f1d8bdf81d53be55a6a8ed8b8ada6590e6e880ca90575945a66e47a5764ab",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "a7cc50e0-c355-4eee-816a-ab786c963f51-1",
+        "image": "/home/user/claude_cloud_session/tools/hyperframes/kalyani/.hyperframes/artifacts/snapshots/5d1f638b-2956-4ac7-9d76-ba6deee2b664/frame-01-at-8s.png",
+        "time": 8,
+        "metadata": {
+          "width": 1920,
+          "height": 1080,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1793617223009,
+        "contentHash": "9d08b57daa5944d11f52de9b1103cd3f41626bc478d352496e47d328b24deedc",
+        "revision": null,
+        "inputFingerprint": "4c3f1d8bdf81d53be55a6a8ed8b8ada6590e6e880ca90575945a66e47a5764ab",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "a7cc50e0-c355-4eee-816a-ab786c963f51-2",
+        "image": "/home/user/claude_cloud_session/tools/hyperframes/kalyani/.hyperframes/artifacts/snapshots/5d1f638b-2956-4ac7-9d76-ba6deee2b664/frame-02-at-16s.png",
+        "time": 16,
+        "metadata": {
+          "width": 1920,
+          "height": 1080,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1793617223009,
+        "contentHash": "06d567a2efa017339d6d1765393fb7877ee9259923cb9b55ce34bb50350ce8e3",
+        "revision": null,
+        "inputFingerprint": "4c3f1d8bdf81d53be55a6a8ed8b8ada6590e6e880ca90575945a66e47a5764ab",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "a7cc50e0-c355-4eee-816a-ab786c963f51-3",
+        "image": "/home/user/claude_cloud_session/tools/hyperframes/kalyani/.hyperframes/artifacts/snapshots/5d1f638b-2956-4ac7-9d76-ba6deee2b664/frame-03-at-23s.png",
+        "time": 23,
+        "metadata": {
+          "width": 1920,
+          "height": 1080,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1793617223009,
+        "contentHash": "2cbfce1f6513ecbdd39a48ae51443c32361221a1e97e84fb4c10abc0ebd647de",
+        "revision": null,
+        "inputFingerprint": "4c3f1d8bdf81d53be55a6a8ed8b8ada6590e6e880ca90575945a66e47a5764ab",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "a7cc50e0-c355-4eee-816a-ab786c963f51-4",
+        "image": "/home/user/claude_cloud_session/tools/hyperframes/kalyani/.hyperframes/artifacts/snapshots/5d1f638b-2956-4ac7-9d76-ba6deee2b664/frame-04-at-28s.png",
+        "time": 28,
+        "metadata": {
+          "width": 1920,
+          "height": 1080,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1793617223009,
+        "contentHash": "c05cac0fab5fda85056297a15b6377b8d1aa470d21785bd273c220dd922e905b",
+        "revision": null,
+        "inputFingerprint": "4c3f1d8bdf81d53be55a6a8ed8b8ada6590e6e880ca90575945a66e47a5764ab",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "a7cc50e0-c355-4eee-816a-ab786c963f51-5",
+        "image": "/home/user/claude_cloud_session/tools/hyperframes/kalyani/.hyperframes/artifacts/snapshots/5d1f638b-2956-4ac7-9d76-ba6deee2b664/frame-05-at-31.75s.png",
+        "time": 31.75,
+        "metadata": {
+          "width": 1920,
+          "height": 1080,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1793617223009,
+        "contentHash": "5e2715ae890e65eabe8198315882c325dde8c66b7d26fcc6eeb5f57dba5eabdd",
+        "revision": null,
+        "inputFingerprint": "4c3f1d8bdf81d53be55a6a8ed8b8ada6590e6e880ca90575945a66e47a5764ab",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "renders": {
+    "latest": {
+      "id": "8a178206-b9d6-4954-bcbd-f36be48fbe7d",
+      "completedAt": 1793617375139,
+      "output": "/home/user/claude_cloud_session/exports/kalyani/kalyani-lyrics_preview_v1.mp4",
+      "status": "completed",
+      "revision": null
+    },
+    "retainedRevisions": []
+  },
+  "pendingArtifactCleanup": []
+}

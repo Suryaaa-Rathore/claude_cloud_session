@@ -11,3 +11,6 @@
 node_modules/
 tools/hyperframes/studio-test/assets/gsap.min.js
 renders/
+*.m4a
+*.aac
+.hyperframes/artifacts/
