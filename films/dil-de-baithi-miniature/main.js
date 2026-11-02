@@ -138,7 +138,7 @@ shot(S[27] - .1, S[28] - .2, { clock: [84.6, 85.2], az: 175, cam: (u) => orb(V(0
 // winter morning: fog, low pale sun, smoke, a small fire
 shot(S[28] - .2, S[29] - .2, { clock: [103.2, 103.6], az: 150, winter: 1, cam: (u) => orb(V(PEEPAL.x + 9.5, 1, PEEPAL.z), lerp(26, 20, u), 18, -35, 26), band: BAND(.05, 30, .65, 2500), follow: 'pairFire' });
 // rise: the village becomes a pattern
-shot(S[29] - .2, S[30] - .2, { clock: [104, 105], az: 165, winter: .4, cam: (u) => { const h = Math.exp(lerp(Math.log(30), Math.log(1100), eio(u))); const c = orb(V(PEEPAL.x + 6, 0, PEEPAL.z), h, lerp(40, 88, eio(u)), -35, 30); return c; }, band: BAND(.06, 26, .5, 8000), follow: 'pairFire' });
+shot(S[29] - .2, S[30] - .2, { clock: [104, 105], az: 165, cam: (u) => { const h = Math.exp(lerp(Math.log(30), Math.log(1100), eio(u))); const c = orb(V(PEEPAL.x + 6, 0, PEEPAL.z), h, lerp(40, 88, eio(u)), -35, 30); return c; }, band: BAND(.06, 26, .5, 8000), follow: 'pairFire' });
 // night: one window, one heart
 shot(S[30] - .2, S[31] - .2, { clock: [117, 117.3], az: 200, cam: (u) => orb(HER_ROOF.clone(), lerp(320, 90, eio(u)), lerp(70, 40, eio(u)), 10, 28), band: BAND(.05, 30, .62, 4000), follow: 'pairRoof', density: .2, string: true });
 // dawn at the temple
