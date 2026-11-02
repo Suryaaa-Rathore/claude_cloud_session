@@ -1,0 +1,8 @@
+# Large media files — keep them out of git (store locally or use Git LFS)
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.mxf
+*.wav
+*.mp3
