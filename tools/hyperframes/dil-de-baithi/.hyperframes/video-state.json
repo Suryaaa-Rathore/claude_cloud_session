@@ -981,5 +981,16 @@
       ]
     },
     "unversioned": []
-  }
+  },
+  "renders": {
+    "latest": {
+      "id": "10ff94a4-6131-4009-a210-3c9a381152b6",
+      "completedAt": 1793619075372,
+      "output": "/home/user/claude_cloud_session/exports/dil-de-baithi/dil-de-baithi-lyrics_v1.mp4",
+      "status": "completed",
+      "revision": null
+    },
+    "retainedRevisions": []
+  },
+  "pendingArtifactCleanup": []
 }
