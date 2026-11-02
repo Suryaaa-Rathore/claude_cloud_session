@@ -531,12 +531,16 @@ def sc_petals(S):
 
 def sc_finale(S):
     S.background("sunset")
-    h = S.item("lot", "2764_fe0f", CX, 320, 280, S.s + 0.1, out=S.e - 3.2)
-    S.pulse(h, S.s + 0.5, S.e - 3.3, 1.1, every=1)
-    S.item("lot", "1f386", 480, 260, 220, S.wt("dil") - 0.2, out=S.e - 3.2)
-    S.item("lot", "1f386", 1440, 260, 220, S.wt("baithi") - 0.2, out=S.e - 3.2)
+    h = S.item("lot", "2764_fe0f", CX, 600, 240, S.s + 0.2)
+    S.pulse(h, S.s + 0.8, S.e - 0.5, 1.1, every=1)
+    S.item("lot", "2728", 380, 300, 220, S.s + 1.2)
+    S.item("lot", "1f4ab", 1540, 300, 220, S.s + 1.8)
+    S.item("lot", "1f389", 300, 760, 170, S.s + 3.0, enter="left")
+    S.item("lot", "1f496", 1620, 760, 170, S.s + 3.4, enter="right")
     S.h.append('<div class="endtitle">Dil De Baithi<small>Dhanda Nyoliwala</small></div>')
-    S.tw(f"#{S.id} .endtitle", "{opacity:0, scale:0.6}", "{opacity:1, scale:1, duration:0.9, ease:'back.out(2)'}", S.e - 3.0)
+    S.tw(f"#{S.id} .endtitle", "{opacity:0, scale:0.6}", "{opacity:1, scale:1, duration:0.9, ease:'back.out(2)'}", S.s + 0.6)
+    for t in beats_in(S.s + 1.5, S.e - 0.5, "downbeats"):
+        S.j.append(f'tl.fromTo("#{S.id} .endtitle", {{scale:1}}, {{scale:1.04, duration:0.12, yoyo:true, repeat:1}}, {rt(t)});')
 
 
 SCENES = {k[3:]: v for k, v in list(globals().items()) if k.startswith("sc_")}
@@ -665,7 +669,7 @@ html, body {{ width: 1920px; height: 1080px; overflow: hidden; background: #1a0b
    text-shadow: 0 10px 40px rgba(80,0,40,0.55); z-index: 6; }}
 .tword {{ display: inline-flex; }} .tch {{ display: inline-block; }}
 .artistline {{ position: absolute; left: 0; right: 0; top: 470px; text-align: center; font-weight: 700; font-size: 64px; color: #ffe066; text-shadow: 0 4px 22px rgba(0,0,0,0.4); z-index: 6; }}
-.endtitle {{ position: absolute; left: 0; right: 0; top: 230px; text-align: center; font-weight: 800; font-size: 150px; line-height: 1.1; color: #fff; text-shadow: 0 10px 40px rgba(80,0,40,0.6); z-index: 6; }}
+.endtitle {{ position: absolute; left: 0; right: 0; top: 150px; text-align: center; font-weight: 800; font-size: 150px; line-height: 1.1; color: #fff; text-shadow: 0 10px 40px rgba(80,0,40,0.6); z-index: 6; }}
 .endtitle small {{ display: block; font-size: 60px; color: #ffe066; font-weight: 700; }}
 .lyr {{ display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 96px; z-index: 100; }}
 .plate {{ position: absolute; left: 50%; bottom: 60px; width: 1500px; height: 290px; margin-left: -750px; border-radius: 40px;

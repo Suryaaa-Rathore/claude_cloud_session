@@ -3,40 +3,306 @@
   "artist": "Dhanda Nyoliwala",
   "duration": 241.8,
   "slides": [
-    {"s": 0.0,   "e": 26.6,  "scene": "intro",     "lines": []},
-    {"s": 26.8,  "e": 34.0,  "scene": "heart",     "lines": ["Pyaar pe be-etbaar thi jo baat", "Dil de baithi ek chhore ne"]},
-    {"s": 34.3,  "e": 41.2,  "scene": "hearts",    "lines": ["Dil de baithi ek chhore ne", "Dil de baithi ek chhore ne"]},
-    {"s": 41.5,  "e": 52.3,  "scene": "night",     "lines": ["Duniya maadi laagan laagi", "Raataan ne hi jaagan laagi"]},
-    {"s": 52.6,  "e": 56.3,  "scene": "running",   "lines": ["Us chhore ka jikra ho toh", "Uth ke nuaari bhaagan laagi"]},
-    {"s": 56.5,  "e": 63.5,  "scene": "rooftop",   "lines": ["Chhat pe chadh ke haase jaa se", "Dekh ke kaagaj kore ne"]},
-    {"s": 63.8,  "e": 71.0,  "scene": "heart",     "lines": ["Pyaar pe be-etbaar thi jo baat", "Dil de baithi ek chhore ne"]},
-    {"s": 71.3,  "e": 78.2,  "scene": "hearts",    "lines": ["Dil de baithi ek chhore ne", "Dil de baithi ek chhore ne"]},
-    {"s": 78.4,  "e": 85.4,  "scene": "music",     "lines": []},
-    {"s": 85.7,  "e": 93.0,  "scene": "stars",     "lines": ["Baith ke kalli re va taare ginne hai", "Gel bitaaye din saare ginne hai"]},
-    {"s": 93.2,  "e": 100.1, "scene": "firstmeet", "lines": ["Raat va pehli mulaqaat aale pal", "Baith ke chup jo guzaare ginne hai"]},
-    {"s": 100.3, "e": 103.8, "scene": "cup",       "lines": ["Ishq pyaala pee ke maani", "Faisla dil ka dee ke maani"]},
-    {"s": 104.1, "e": 108.0, "scene": "embrace",   "lines": ["Aashiq god mein mar jaave hain", "Tu baahaan mein jee ke maani"]},
-    {"s": 108.3, "e": 115.2, "scene": "praise",    "lines": ["Jis tariaan tareef kare laage", "Mholi uske tore ne"]},
-    {"s": 115.5, "e": 122.7, "scene": "heart",     "lines": ["Pyaar pe be-etbaar thi jo baat", "Dil de baithi ek chhore ne"]},
-    {"s": 123.0, "e": 129.2, "scene": "hearts",    "lines": ["Dil de baithi ek chhore ne", "Dil de baithi ek chhore ne"]},
-    {"s": 129.4, "e": 133.1, "scene": "sorrow",    "lines": ["Aaja baith ke ne kalle", "Dukh jitne bhi palle"]},
-    {"s": 133.4, "e": 136.7, "scene": "rings",     "lines": ["Ek doosre ne aaj", "Aapna keh jaana"]},
-    {"s": 137.0, "e": 140.4, "scene": "heartbeat", "lines": ["Tere seene sir laake", "Teri baahaan mein haaye aake"]},
-    {"s": 140.7, "e": 144.3, "scene": "forever",   "lines": ["Tere dil mein", "Sadaa ke liye reh jaana"]},
-    {"s": 144.6, "e": 148.0, "scene": "eyes",      "lines": ["Tu manne dekhe jaave", "Har saans te jyaada chaave"]},
-    {"s": 148.3, "e": 151.6, "scene": "magnet",    "lines": ["Main jitna hat-ti jaau", "Tu utna nede aave"]},
-    {"s": 151.9, "e": 155.5, "scene": "sulk",      "lines": ["Main jaan boojh ke russu", "Tu galti maang manaave"]},
-    {"s": 155.7, "e": 158.8, "scene": "hands",     "lines": ["Tera haath pakad ke rakh lu", "Jis jagah pe thhona chaave"]},
-    {"s": 159.1, "e": 161.3, "scene": "nazar",     "lines": ["Haaye nazar na lag jaaye"]},
-    {"s": 161.5, "e": 166.7, "scene": "thread",    "lines": ["Rakh baandh", "Rakh baandh ke kaale dore ne"]},
-    {"s": 166.9, "e": 174.2, "scene": "heart",     "lines": ["Pyaar pe be-etbaar thi jo baat", "Dil de baithi ek chhore ne"]},
-    {"s": 174.5, "e": 182.1, "scene": "hearts",    "lines": ["Dil de baithi ek chhore ne", "Dil de baithi ek chhore ne"]},
-    {"s": 182.3, "e": 189.6, "scene": "winter",    "lines": ["Teriyaani baahaan hove", "Sard hawaavaan hove"]},
-    {"s": 189.9, "e": 198.0, "scene": "faraway",   "lines": ["Duniya te door jaake", "Dukhde sunaava main"]},
-    {"s": 198.3, "e": 205.3, "scene": "onlyyou",   "lines": ["Tere te alaawa kite", "Nazraan milaava main"]},
-    {"s": 205.5, "e": 212.8, "scene": "prayer",    "lines": ["Hey rabb kare haaye", "Sacchi mar jaava main"]},
-    {"s": 213.1, "e": 217.0, "scene": "petals",    "lines": ["Sacchi mar jaava main"]},
-    {"s": 217.1, "e": 232.1, "scene": "music",     "lines": []},
-    {"s": 232.4, "e": 241.8, "scene": "finale",    "lines": ["Pyaar pe be-etbaar thi jo baat", "Dil de baithi ek chhore ne"]}
+    {
+      "s": 0.0,
+      "e": 26.6,
+      "scene": "intro",
+      "lines": []
+    },
+    {
+      "s": 26.8,
+      "e": 34.0,
+      "scene": "heart",
+      "lines": [
+        "Pyaar pe be-etbaar thi jo baat",
+        "Dil de baithi ek chhore ne"
+      ]
+    },
+    {
+      "s": 34.3,
+      "e": 41.2,
+      "scene": "hearts",
+      "lines": [
+        "Dil de baithi ek chhore ne",
+        "Dil de baithi ek chhore ne"
+      ]
+    },
+    {
+      "s": 41.5,
+      "e": 52.3,
+      "scene": "night",
+      "lines": [
+        "Duniya maadi laagan laagi",
+        "Raataan ne hi jaagan laagi"
+      ]
+    },
+    {
+      "s": 52.6,
+      "e": 56.3,
+      "scene": "running",
+      "lines": [
+        "Us chhore ka jikra ho toh",
+        "Uth ke nuaari bhaagan laagi"
+      ]
+    },
+    {
+      "s": 56.5,
+      "e": 63.5,
+      "scene": "rooftop",
+      "lines": [
+        "Chhat pe chadh ke haase jaa se",
+        "Dekh ke kaagaj kore ne"
+      ]
+    },
+    {
+      "s": 63.8,
+      "e": 71.0,
+      "scene": "heart",
+      "lines": [
+        "Pyaar pe be-etbaar thi jo baat",
+        "Dil de baithi ek chhore ne"
+      ]
+    },
+    {
+      "s": 71.3,
+      "e": 78.2,
+      "scene": "hearts",
+      "lines": [
+        "Dil de baithi ek chhore ne",
+        "Dil de baithi ek chhore ne"
+      ]
+    },
+    {
+      "s": 78.4,
+      "e": 85.4,
+      "scene": "music",
+      "lines": []
+    },
+    {
+      "s": 85.7,
+      "e": 93.0,
+      "scene": "stars",
+      "lines": [
+        "Baith ke kalli re va taare ginne hai",
+        "Gel bitaaye din saare ginne hai"
+      ]
+    },
+    {
+      "s": 93.2,
+      "e": 100.1,
+      "scene": "firstmeet",
+      "lines": [
+        "Raat va pehli mulaqaat aale pal",
+        "Baith ke chup jo guzaare ginne hai"
+      ]
+    },
+    {
+      "s": 100.3,
+      "e": 103.8,
+      "scene": "cup",
+      "lines": [
+        "Ishq pyaala pee ke maani",
+        "Faisla dil ka dee ke maani"
+      ]
+    },
+    {
+      "s": 104.1,
+      "e": 108.0,
+      "scene": "embrace",
+      "lines": [
+        "Aashiq god mein mar jaave hain",
+        "Tu baahaan mein jee ke maani"
+      ]
+    },
+    {
+      "s": 108.3,
+      "e": 115.2,
+      "scene": "praise",
+      "lines": [
+        "Jis tariaan tareef kare laage",
+        "Mholi uske tore ne"
+      ]
+    },
+    {
+      "s": 115.5,
+      "e": 122.7,
+      "scene": "heart",
+      "lines": [
+        "Pyaar pe be-etbaar thi jo baat",
+        "Dil de baithi ek chhore ne"
+      ]
+    },
+    {
+      "s": 123.0,
+      "e": 129.2,
+      "scene": "hearts",
+      "lines": [
+        "Dil de baithi ek chhore ne",
+        "Dil de baithi ek chhore ne"
+      ]
+    },
+    {
+      "s": 129.4,
+      "e": 133.1,
+      "scene": "sorrow",
+      "lines": [
+        "Aaja baith ke ne kalle",
+        "Dukh jitne bhi palle"
+      ]
+    },
+    {
+      "s": 133.4,
+      "e": 136.7,
+      "scene": "rings",
+      "lines": [
+        "Ek doosre ne aaj",
+        "Aapna keh jaana"
+      ]
+    },
+    {
+      "s": 137.0,
+      "e": 140.4,
+      "scene": "heartbeat",
+      "lines": [
+        "Tere seene sir laake",
+        "Teri baahaan mein haaye aake"
+      ]
+    },
+    {
+      "s": 140.7,
+      "e": 144.3,
+      "scene": "forever",
+      "lines": [
+        "Tere dil mein",
+        "Sadaa ke liye reh jaana"
+      ]
+    },
+    {
+      "s": 144.6,
+      "e": 148.0,
+      "scene": "eyes",
+      "lines": [
+        "Tu manne dekhe jaave",
+        "Har saans te jyaada chaave"
+      ]
+    },
+    {
+      "s": 148.3,
+      "e": 151.6,
+      "scene": "magnet",
+      "lines": [
+        "Main jitna hat-ti jaau",
+        "Tu utna nede aave"
+      ]
+    },
+    {
+      "s": 151.9,
+      "e": 155.5,
+      "scene": "sulk",
+      "lines": [
+        "Main jaan boojh ke russu",
+        "Tu galti maang manaave"
+      ]
+    },
+    {
+      "s": 155.7,
+      "e": 158.8,
+      "scene": "hands",
+      "lines": [
+        "Tera haath pakad ke rakh lu",
+        "Jis jagah pe thhona chaave"
+      ]
+    },
+    {
+      "s": 159.1,
+      "e": 161.3,
+      "scene": "nazar",
+      "lines": [
+        "Haaye nazar na lag jaaye"
+      ]
+    },
+    {
+      "s": 161.5,
+      "e": 166.7,
+      "scene": "thread",
+      "lines": [
+        "Rakh baandh",
+        "Rakh baandh ke kaale dore ne"
+      ]
+    },
+    {
+      "s": 166.9,
+      "e": 174.2,
+      "scene": "heart",
+      "lines": [
+        "Pyaar pe be-etbaar thi jo baat",
+        "Dil de baithi ek chhore ne"
+      ]
+    },
+    {
+      "s": 174.5,
+      "e": 182.1,
+      "scene": "hearts",
+      "lines": [
+        "Dil de baithi ek chhore ne",
+        "Dil de baithi ek chhore ne"
+      ]
+    },
+    {
+      "s": 182.3,
+      "e": 189.6,
+      "scene": "winter",
+      "lines": [
+        "Teriyaani baahaan hove",
+        "Sard hawaavaan hove"
+      ]
+    },
+    {
+      "s": 189.9,
+      "e": 198.0,
+      "scene": "faraway",
+      "lines": [
+        "Duniya te door jaake",
+        "Dukhde sunaava main"
+      ]
+    },
+    {
+      "s": 198.3,
+      "e": 205.3,
+      "scene": "onlyyou",
+      "lines": [
+        "Tere te alaawa kite",
+        "Nazraan milaava main"
+      ]
+    },
+    {
+      "s": 205.5,
+      "e": 212.8,
+      "scene": "prayer",
+      "lines": [
+        "Hey rabb kare haaye",
+        "Sacchi mar jaava main"
+      ]
+    },
+    {
+      "s": 213.1,
+      "e": 217.0,
+      "scene": "petals",
+      "lines": [
+        "Sacchi mar jaava main"
+      ]
+    },
+    {
+      "s": 217.1,
+      "e": 232.1,
+      "scene": "music",
+      "lines": []
+    },
+    {
+      "s": 232.4,
+      "e": 241.8,
+      "scene": "finale",
+      "lines": []
+    }
   ]
 }

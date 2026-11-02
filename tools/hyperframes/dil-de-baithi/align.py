@@ -149,6 +149,75 @@ def syl(w):
     return max(1, len(re.findall(r"[aeiouy]+", w.lower())))
 
 
+def phrases(t0, t1, min_gap=0.3, min_len=0.25):
+    """Voiced stretches in [t0,t1], gaps shorter than min_gap merged."""
+    a, b = int(t0 * FPS), int(t1 * FPS)
+    thr = min(-30.0, float(np.percentile(dbs[a:b], 90)) - 14)  # adapt to quieter passages
+    on = dbs[a:b] > thr
+    out, i = [], 0
+    while i < len(on):
+        if on[i]:
+            j = i
+            while j < len(on) and on[j]:
+                j += 1
+            out.append([(a + i) / FPS, (a + j) / FPS])
+            i = j
+        else:
+            i += 1
+    merged = []
+    for p in out:
+        if merged and p[0] - merged[-1][1] < min_gap:
+            merged[-1][1] = p[1]
+        else:
+            merged.append(p)
+    return [p for p in merged if p[1] - p[0] >= min_len]
+
+
+def phrase_align(line_words, t0, t1):
+    """Silence-aware fallback: lines -> groups of phrases -> words by syllables."""
+    ph = phrases(t0, t1)
+    nl = len(line_words)
+    if not ph:
+        return None
+    while len(ph) < nl:  # lines sung back to back: split the longest phrase at its deepest dip
+        k = max(range(len(ph)), key=lambda i: ph[i][1] - ph[i][0])
+        a_, b_ = ph[k]
+        lo, hi = int((a_ + (b_ - a_) * 0.3) * FPS), int((a_ + (b_ - a_) * 0.7) * FPS)
+        cut = (lo + int(np.argmin(dbs[lo:hi]))) / FPS
+        ph[k:k + 1] = [[a_, cut], [cut + 0.02, b_]]
+    sy = [sum(syl(w) for w in ws) for ws in line_words]
+    # choose nl-1 cut points among phrase boundaries (brute force, few phrases)
+    import itertools
+    best, bcut = 1e9, None
+    for cuts in itertools.combinations(range(1, len(ph)), nl - 1):
+        bounds = [0, *cuts, len(ph)]
+        durs = [ph[bounds[k + 1] - 1][1] - ph[bounds[k]][0] for k in range(nl)]
+        tot = sum(durs)
+        err = sum(abs(durs[k] / tot - sy[k] / sum(sy)) for k in range(nl))
+        if err < best:
+            best, bcut = err, bounds
+    res = []
+    for k in range(nl):
+        segs = ph[bcut[k]:bcut[k + 1]]
+        voiced = sum(b - a for a, b in segs)
+        ws = line_words[k]
+        wsy = [syl(w) + 0.5 for w in ws]
+        tot = sum(wsy)
+        times, acc = [], 0.0
+        for w_ in wsy:  # walk along voiced time only (skipping the gaps)
+            target = acc / tot * voiced
+            for a, b in segs:
+                if target <= b - a:
+                    times.append(a + target)
+                    break
+                target -= b - a
+            else:
+                times.append(segs[-1][1] - 0.1)
+            acc += w_
+        res.append(times)
+    return res
+
+
 # ---------------------------------------------------------------- whisper words
 offsets = {o["i"]: o["offset"] for o in json.loads((HERE / "stems/lines/offsets.json").read_text())}
 
@@ -157,7 +226,7 @@ def whisper_words(i):
     f = HERE / f"stems/lines/l{i:02d}.wav.json"
     if not f.exists():
         return []
-    d = json.loads(f.read_text())
+    d = json.loads(f.read_bytes().decode("utf-8", "replace"))
     out, seen = [], set()
     for s in d["transcription"]:
         txt = s["text"].strip()
@@ -165,8 +234,10 @@ def whisper_words(i):
         if not txt or txt.startswith("[") or b - a < 0.04:
             continue
         key = (txt, round(a, 1))
-        if key in seen:
+        if key in seen or len(txt) > 14:
             continue
+        if len(out) >= 2 and out[-1]["dev"] == txt and out[-2]["dev"] == txt:  # decoder stuck in a loop
+            break
         seen.add(key)
         out.append({"dev": txt, "lat": translit(txt), "t": offsets[i] + a, "e": offsets[i] + b})
     return out
@@ -181,6 +252,8 @@ for li, ln in enumerate(DP["lines"]):
 
 lines_out, report = [], []
 for si, items in sorted(by_slide.items()):
+    if not data["slides"][si]["lines"]:  # instrumental: no lyrics shown
+        continue
     words, owner, dp_t = [], [], []
     wh = []
     for li, ln in items:
@@ -210,6 +283,9 @@ for si, items in sorted(by_slide.items()):
         if best is None or score > best[0] + 0.5:
             best = (score, R, mR)
     _, R, m = best
+    weak = R == 1 and len(m) < 0.5 * len(words)
+    if weak:  # whisper could not follow this part: trust the acoustic alignment instead
+        m = {}
     words_all = words * R
     owner_all = [(o[0], o[1], r) for r in range(R) for o in owner]
     dp_all = dp_t + [None] * (len(words) * (R - 1))
@@ -218,6 +294,10 @@ for si, items in sorted(by_slide.items()):
         ts[li_] = wh[wi]["t"]
     if ts[0] is None:
         ts[0] = dp_t[0]
+    if weak:
+        lw = [[w["w"] for w in ln["words"]] for _, ln in items]
+        pa = phrase_align(lw, data["slides"][si]["s"] - 0.4, data["slides"][si]["e"] - 0.05)
+        ts = [t for line in pa for t in line] if pa else list(dp_t)
     last = -1
     for k in range(len(ts)):
         if ts[k] is not None:
@@ -239,8 +319,52 @@ for si, items in sorted(by_slide.items()):
     for k, t in enumerate(ts):
         lo = final[-1] + 0.08 if final else t - 0.3
         hi = (ts[k + 1] - 0.08) if k + 1 < len(ts) else t + 0.3
-        final.append(max(lo, snap(t, lo, hi)))
-    report.append(f"slide {si:2d}: {len(m)}/{len(words_all)} words matched by whisper" + ("  (lines sung twice)" if R == 2 else ""))
+        t2 = max(lo, snap(t, lo, hi))
+        # never start a word in silence: move it to where the voice comes in
+        f0 = int(t2 * FPS)
+        if dbs[f0] < -32:
+            lim = int(min(hi, t2 + 1.2) * FPS)
+            voiced = np.where(dbs[f0:lim] > -30)[0]
+            if len(voiced):
+                t2 = (f0 + voiced[0]) / FPS
+        final.append(t2)
+    # sanity check: a word in the middle of a line must not span a long silence
+    def violation(times):
+        v_ = 0.0
+        nper = len(words)
+        for k in range(len(times) - 1):
+            if (k % nper) in line_final_idx:
+                continue
+            a_, b_ = int((times[k] + 0.25) * FPS), int(times[k + 1] * FPS)
+            if b_ > a_:
+                q = dbs[a_:b_] < -32
+                run = best_run = 0
+                for x in q:
+                    run = run + 1 if x else 0
+                    best_run = max(best_run, run)
+                if best_run > 60:
+                    v_ += best_run / FPS
+        return v_
+    line_final_idx = set()
+    cnt = 0
+    for _, ln in items:
+        cnt += len(ln["words"])
+        line_final_idx.add(cnt - 1)
+    va = violation(final)
+    if va > 0:
+        lw = [[w["w"] for w in ln["words"]] for _, ln in items] * R
+        pa = phrase_align(lw, data["slides"][si]["s"] - 0.4, data["slides"][si]["e"] - 0.05)
+        if pa:
+            alt = [t for line in pa for t in line]
+            alt2 = []
+            for k, t in enumerate(alt):
+                lo = alt2[-1] + 0.08 if alt2 else t - 0.3
+                hi = (alt[k + 1] - 0.08) if k + 1 < len(alt) else t + 0.3
+                alt2.append(max(lo, snap(t, lo, hi)))
+            if violation(alt2) < va:
+                final = alt2
+                report.append(f"slide {si:2d}: whisper timing crossed {va:.1f}s of silence -> phrase alignment")
+    report.append(f"slide {si:2d}: {len(m)}/{len(words_all)} words matched by whisper" + ("  (lines sung twice)" if R == 2 else "") + ("  -> acoustic fallback" if weak else ""))
     words, owner = words_all, owner_all
     # emit lines (one entry per line per repeat)
     for r in range(R):
