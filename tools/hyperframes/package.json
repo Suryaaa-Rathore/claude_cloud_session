@@ -15,6 +15,7 @@
     "@fontsource/poppins": "^5.3.0",
     "@fontsource/yellowtail": "^5.3.0",
     "gsap": "^3.15.0",
-    "hyperframes": "^0.9.2"
+    "hyperframes": "^0.9.2",
+    "lottie-web": "^5.12.2"
   }
 }

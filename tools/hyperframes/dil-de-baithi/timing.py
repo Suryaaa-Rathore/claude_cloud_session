@@ -1,114 +1,183 @@
 #!/usr/bin/env python3
-"""Estimates line and word timings from the song audio and writes lyrics.json.
+"""Aligns every lyric word to the isolated vocal track and writes lyrics.json.
 
-Slide windows (from the original lyric video) are in slides.json. Inside each slide,
-a 'vocal activity' curve (energy of the centre channel vs. the sides in the 300-3400 Hz
-voice band) is used to find where each line is sung and the pause between lines. Words
-are spread over the line by syllable count and snapped to nearby vocal onsets.
-
-It is an estimate, not true speech recognition. To fix a word by hand, edit lyrics.json
-(or add "fix" overrides in slides.json) and rebuild.
+Pipeline:
+  1. separate.py has split the song into stems/vocals.wav (UVR-MDX-NET-Voc_FT).
+  2. Here, on the clean vocals:
+     - loudness (dB) and spectral flux are computed every 10 ms;
+     - each line's sung span = where the vocals are above a level gate inside the slide;
+     - two-line slides are split at the longest quiet gap near the expected point;
+     - candidate syllable boundaries = energy dips + flux peaks;
+     - dynamic programming picks one boundary per word start so that boundaries are
+       strong AND word lengths match their syllable counts.
+Manual fixes: put {"slide": i, "line": j, "word": k, "t": seconds} objects in
+slides.json "fixes" and re-run; they override the aligner.
 """
 import json
 import re
-import subprocess
 from pathlib import Path
 
 import numpy as np
+import soundfile as sf
 
 HERE = Path(__file__).parent
-SR, HOP, WIN = 16000, 160, 1024  # 10 ms frames
-FPS = SR // HOP
+FPS = 100
 
-pcm = subprocess.run(
-    ["ffmpeg", "-v", "error", "-i", str(HERE / "assets/song.m4a"), "-ac", "2", "-ar", str(SR), "-f", "s16le", "-"],
-    capture_output=True, check=True).stdout
-x = np.frombuffer(pcm, np.int16).reshape(-1, 2).astype(np.float32) / 32768
-mid, side = (x[:, 0] + x[:, 1]) / 2, (x[:, 0] - x[:, 1]) / 2
-
-
-def band_energy(sig):
-    n = (len(sig) - WIN) // HOP
-    f = np.fft.rfftfreq(WIN, 1 / SR)
-    band = (f > 300) & (f < 3400)
-    out = []
-    win = np.hanning(WIN)
-    for k in range(0, n, 4000):
-        idx = np.arange(WIN)[None, :] + HOP * np.arange(k, min(n, k + 4000))[:, None]
-        out.append((np.abs(np.fft.rfft(sig[idx] * win, axis=1)) ** 2)[:, band].sum(1))
-    return np.concatenate(out)
-
-
-em, es = band_energy(mid), band_energy(side)
-ratio = 10 * np.log10(em + 1e-9) - 10 * np.log10(es + 1e-9)
-loud = 10 * np.log10(em + 1e-9)
+v, sr = sf.read(HERE / "stems/vocals.wav", always_2d=True)
+v = v.mean(1)
+hop, win = sr // FPS, 2048
+n = (len(v) - win) // hop
+db = np.empty(n)
+flux = np.zeros(n)
+prev = None
+w = np.hanning(win)
+for k in range(0, n, 2000):
+    idx = np.arange(win)[None, :] + hop * np.arange(k, min(n, k + 2000))[:, None]
+    fr = v[idx] * w
+    sp = np.abs(np.fft.rfft(fr, axis=1))[:, 4:300]  # ~90 Hz .. 6.4 kHz
+    db[k:k + len(fr)] = 20 * np.log10(np.sqrt((fr ** 2).mean(1)) + 1e-9)
+    lg = np.log1p(sp * 10)
+    d = np.diff(lg, axis=0, prepend=lg[:1] if prev is None else prev[None, :])
+    flux[k:k + len(fr)] = np.maximum(d, 0).sum(1)
+    prev = lg[-1]
 
 
-def smooth(a, n):
-    return np.convolve(a, np.ones(n) / n, "same")
+def sm(a, k):
+    return np.convolve(a, np.ones(k) / k, "same")
 
 
-act = smooth(ratio, 15)
-act_slow = smooth(ratio, 40)
-onset = np.maximum(0, np.diff(smooth(loud, 3), prepend=loud[0]))
+dbs = sm(db, 5)
+flux = sm(flux, 3)
+flux = flux / (np.percentile(flux, 99) + 1e-9)
+GATE = -30.0  # dB: vocals present above this
+
+# boundary strength: dip depth (vs. surrounding 120 ms max) + onset flux
+dip = np.zeros(n)
+for i in range(12, n - 12):
+    dip[i] = max(0.0, min(dbs[i - 12:i].max(), dbs[i + 1:i + 13].max()) - dbs[i])
+dip = dip / 12.0
+bscore = np.clip(dip, 0, 1.5) + 0.8 * np.clip(np.roll(flux, -3), 0, 1.5)
 
 
-def syllables(word):
+def syl(word):
     return max(1, len(re.findall(r"[aeiouy]+", word.lower())))
-
-
-def snap(t, lo, hi):
-    """Move t to the strongest vocal onset within +-0.12 s, staying inside (lo, hi)."""
-    a, b = int((t - 0.12) * FPS), int((t + 0.12) * FPS)
-    a, b = max(a, int(lo * FPS) + 1), min(b, int(hi * FPS) - 1)
-    if b <= a:
-        return t
-    return (a + int(np.argmax(onset[a:b]))) / FPS
 
 
 def sung_span(t0, t1):
     a, b = int(t0 * FPS), int(t1 * FPS)
-    seg = act[a:b]
-    thr = np.percentile(seg, 35)
-    on = np.where(seg > thr)[0]
+    on = np.where(dbs[a:b] > GATE)[0]
     if len(on) == 0:
         return t0, t1
+    # ignore isolated blips shorter than 60 ms at the edges
     return (a + on[0]) / FPS, (a + on[-1]) / FPS
 
 
+def split_point(t0, t1, frac):
+    """Longest quiet gap (below gate) near the expected split fraction."""
+    a, b = int(t0 * FPS), int(t1 * FPS)
+    exp = a + (b - a) * frac
+    quiet = dbs[a:b] < GATE + 4
+    best, bestv = None, -1e9
+    i = 0
+    while i < len(quiet):
+        if quiet[i]:
+            j = i
+            while j < len(quiet) and quiet[j]:
+                j += 1
+            mid = a + (i + j) / 2
+            val = (j - i) - abs(mid - exp) * 0.15
+            if val > bestv and a + 30 < mid < b - 30:
+                best, bestv = mid, val
+            i = j
+        else:
+            i += 1
+    if best is None:
+        lo, hi = int(exp - (b - a) * 0.15), int(exp + (b - a) * 0.15)
+        best = lo + int(np.argmin(dbs[lo:hi]))
+    return best / FPS
+
+
+lam_base = 1.2
+
+
+def align_words(words, start, end, flex=()):
+    """DP: choose start frame for words[1:] among frames in (start, end)."""
+    a, b = int(start * FPS), min(int(end * FPS), n - 8)
+    lamk = [lam_base * (0.12 if k in flex else 1.0) for k in range(len(words))]
+    sy = np.array([syl(w) for w in words], float)
+    if len(words) == 1:
+        return [start]
+    per = (b - a) / sy.sum()
+    # candidate frames: local maxima of boundary score
+    cand = [i for i in range(a + 6, b - 6) if bscore[i] >= bscore[i - 3:i + 4].max() and bscore[i] > 0.15]
+    if len(cand) < len(words) - 1:
+        cand = list(range(a + 6, b - 6, 3))
+    cand = np.array(cand)
+    if len(cand) < len(words) - 1:
+        print(f"  ! short line {start:.2f}-{end:.2f}: proportional fallback for {' '.join(words)}")
+        return [start + (exp_start_i) / FPS for exp_start_i in (np.concatenate([[0], np.cumsum(sy)])[:-1] * per)]
+    K, C = len(words) - 1, len(cand)
+    exp_start = a + np.concatenate([[0], np.cumsum(sy)])[:-1] * per  # expected start of each word
+    INF = 1e18
+    cost = np.full((K, C), INF)
+    back = np.zeros((K, C), int)
+    for c in range(C):
+        dur = cand[c] - a
+        cost[0, c] = -bscore[cand[c]] + lamk[0] * ((dur - sy[0] * per) / (sy[0] * per + 15)) ** 2 \
+            + 0.4 * ((cand[c] - exp_start[1]) / (per * 2 + 20)) ** 2
+    for k in range(1, K):
+        for c in range(C):
+            best, bi = INF, 0
+            for p in range(c):
+                dur = cand[c] - cand[p]
+                if dur < 8 or cost[k - 1, p] >= INF:
+                    continue
+                v_ = cost[k - 1, p] + lamk[k] * ((dur - sy[k] * per) / (sy[k] * per + 15)) ** 2
+                if v_ < best:
+                    best, bi = v_, p
+            if best < INF:
+                cost[k, c] = best - bscore[cand[c]] + 0.4 * ((cand[c] - exp_start[k + 1]) / (per * 2 + 20)) ** 2
+                back[k, c] = bi
+    # last word must leave room until end
+    last = np.array([cost[K - 1, c] + lamk[-1] * (((b - cand[c]) - sy[-1] * per) / (sy[-1] * per + 15)) ** 2 * 0.5
+                     for c in range(C)])
+    c = int(np.argmin(last))
+    picks = [c]
+    for k in range(K - 1, 0, -1):
+        c = back[k, c]
+        picks.append(c)
+    picks = picks[::-1]
+    return [start] + [cand[p] / FPS for p in picks]
+
+
 data = json.loads((HERE / "slides.json").read_text())
+fixes = {(f["slide"], f["line"], f["word"]): f["t"] for f in data.get("fixes", [])}
 lines_out = []
 for si, sl in enumerate(data["slides"]):
     lines = sl["lines"]
     if not lines:
         continue
-    s, e = sl["s"] - 0.2, sl["e"] - 0.15
-    if len(lines) == 1:
-        windows = [(s, e)]
-    else:
-        # split between the two lines at the quietest vocal point near the weighted middle
-        w1, w2 = sum(map(syllables, lines[0].split())), sum(map(syllables, lines[1].split()))
-        guess = s + (e - s) * w1 / (w1 + w2)
-        a, b = int((guess - 0.25 * (e - s) * 0.5) * FPS), int((guess + 0.25 * (e - s) * 0.5) * FPS)
-        split = (a + int(np.argmin(act_slow[a:b]))) / FPS
-        windows = [(s, split), (split, e)]
-    for li, (text, (w0, w1_)) in enumerate(zip(lines, windows)):
-        start, end = sung_span(w0, w1_)
-        words = text.split()
-        weights = np.array([syllables(w) + 0.6 for w in words], float)
-        cum = np.concatenate([[0], np.cumsum(weights)])[:-1] / weights.sum()
-        times = [start + c * (end - start) for c in cum]
-        snapped, prev = [], start - 0.01
-        for i, t in enumerate(times):
-            nxt = times[i + 1] if i + 1 < len(times) else end
-            t2 = t if i == 0 else snap(t, prev + 0.08, nxt)
-            snapped.append(round(max(t2, prev + 0.08), 3))
-            prev = snapped[-1]
+    s0, e0 = sung_span(sl["s"] - 0.3, sl["e"] - 0.05)
+    allw, owner, flex = [], [], set()
+    for li, text in enumerate(lines):
+        ws = text.split()
+        allw += ws
+        owner += [(li, k) for k in range(len(ws))]
+        flex.add(len(allw) - 1)
+    ts_all = align_words(allw, s0, e0, flex)
+    for li, text in enumerate(lines):
+        idx = [i for i, o in enumerate(owner) if o[0] == li]
+        words = [allw[i] for i in idx]
+        ts = [fixes.get((si, li, k), ts_all[i]) for k, i in enumerate(idx)]
+        nxt = idx[-1] + 1
+        line_end = ts_all[nxt] - 0.05 if nxt < len(allw) else e0
+        # trim the line end to where the voice actually stops (held note tail)
+        w0, w1 = ts[0], line_end
+        ends = ts[1:] + [w1]
         lines_out.append({
             "slide": si, "line": li, "scene": sl["scene"],
-            "start": round(start, 3), "end": round(end, 3),
-            "show": round(sl["s"], 3), "hide": round(sl["e"], 3),
-            "words": [{"w": w, "t": t} for w, t in zip(words, snapped)],
+            "start": round(w0, 3), "end": round(w1, 3),
+            "words": [{"w": w, "t": round(t, 3), "e": round(en, 3)} for w, t, en in zip(words, ts, ends)],
         })
 
 out = {k: data[k] for k in ("title", "artist", "duration")}
@@ -116,5 +185,5 @@ out["slides"] = [{"s": sl["s"], "e": sl["e"], "scene": sl["scene"]} for sl in da
 out["lines"] = lines_out
 (HERE / "lyrics.json").write_text(json.dumps(out, indent=1, ensure_ascii=False))
 print(f"lyrics.json: {len(lines_out)} lines")
-for l in lines_out[:8]:
+for l in lines_out[:10]:
     print(f'{l["start"]:7.2f}-{l["end"]:7.2f}  ' + " ".join(f'{w["w"]}@{w["t"]:.2f}' for w in l["words"]))
