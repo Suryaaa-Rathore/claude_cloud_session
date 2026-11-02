@@ -16,3 +16,5 @@ renders/
 **/.hyperframes/artifacts/
 tools/hyperframes/*/assets/fonts/NotoColorEmoji.ttf
 **/render.log
+exports/**/work-*/
+exports/**/.*hf-transaction*/
