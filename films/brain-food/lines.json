@@ -1,0 +1,8 @@
+[
+ {"id":"v1","text":"What should your brain eat? Let's put five foods on paper. One serving each, and only the numbers.","voice":"af_heart","speed":1.0},
+ {"id":"v2","text":"One cup of raw spinach has a hundred and forty-five micrograms of vitamin K. That's a hundred and twenty-one percent of a day's value. In a study of nine hundred and sixty older adults, about one serving of leafy greens a day went with memory decline like being eleven years younger.","voice":"af_heart","speed":1.05},
+ {"id":"v3","text":"One large egg: a hundred and forty-seven milligrams of choline, about a quarter of the daily value. Your brain uses choline to make acetylcholine, a messenger for memory.","voice":"af_heart","speed":1.05},
+ {"id":"v4","text":"Now, omega-3. By weight, one ounce of walnuts has more than three ounces of salmon: two point five seven grams, against one point eight. But walnut omega-3 is A L A, and your body turns less than one percent of it into D H A, the fat that makes up fifteen to twenty percent of your frontal cortex. Salmon brings one point two four grams of D H A, ready made.","voice":"af_heart","speed":1.05},
+ {"id":"v5","text":"Blueberries carry roughly a hundred and twenty to a hundred and eighty milligrams of anthocyanins per hundred grams. For memory, the evidence is promising, but still being studied.","voice":"af_heart","speed":1.05},
+ {"id":"v6","text":"So: greens, eggs, fish, a handful of walnuts, and berries. Not a cure. Just better raw material for your brain.","voice":"af_heart","speed":1.0}
+]

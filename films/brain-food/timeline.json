@@ -1,0 +1,786 @@
+[
+ {
+  "id": "v1",
+  "t0": 0.8,
+  "dur": 5.524,
+  "text": "What should your brain eat? Let's put five foods on paper. One serving each, and only the numbers.",
+  "words": [
+   {
+    "w": "What",
+    "t": 0.83
+   },
+   {
+    "w": "should",
+    "t": 1.01
+   },
+   {
+    "w": "your",
+    "t": 1.33
+   },
+   {
+    "w": "brain",
+    "t": 1.54
+   },
+   {
+    "w": "eat?",
+    "t": 1.78
+   },
+   {
+    "w": "Let's",
+    "t": 2.16
+   },
+   {
+    "w": "put",
+    "t": 2.54
+   },
+   {
+    "w": "five",
+    "t": 2.77
+   },
+   {
+    "w": "foods",
+    "t": 3.1
+   },
+   {
+    "w": "on",
+    "t": 3.55
+   },
+   {
+    "w": "paper.",
+    "t": 3.62
+   },
+   {
+    "w": "One",
+    "t": 4.2
+   },
+   {
+    "w": "serving",
+    "t": 4.39
+   },
+   {
+    "w": "each,",
+    "t": 4.85
+   },
+   {
+    "w": "and",
+    "t": 5.14
+   },
+   {
+    "w": "only",
+    "t": 5.56
+   },
+   {
+    "w": "the",
+    "t": 5.59
+   },
+   {
+    "w": "numbers.",
+    "t": 5.78
+   }
+  ],
+  "n": 18,
+  "wh": 18
+ },
+ {
+  "id": "v2",
+  "t0": 7.3,
+  "dur": 17.059,
+  "text": "One cup of raw spinach has 145 micrograms of vitamin K. That's 121% of a day's value. In a study of 960 older adults, about one serving of leafy greens a day went with memory decline like being 11 years younger.",
+  "words": [
+   {
+    "w": "One",
+    "t": 7.33
+   },
+   {
+    "w": "cup",
+    "t": 7.51
+   },
+   {
+    "w": "of",
+    "t": 7.72
+   },
+   {
+    "w": "raw",
+    "t": 7.86
+   },
+   {
+    "w": "spinach",
+    "t": 8.07
+   },
+   {
+    "w": "has",
+    "t": 8.59
+   },
+   {
+    "w": "145",
+    "t": 8.76
+   },
+   {
+    "w": "micrograms",
+    "t": 9.81
+   },
+   {
+    "w": "of",
+    "t": 10.98
+   },
+   {
+    "w": "vitamin",
+    "t": 11.18
+   },
+   {
+    "w": "K.",
+    "t": 11.86
+   },
+   {
+    "w": "That's",
+    "t": 12.5
+   },
+   {
+    "w": "121%",
+    "t": 12.92
+   },
+   {
+    "w": "of",
+    "t": 13.94
+   },
+   {
+    "w": "a",
+    "t": 14.14
+   },
+   {
+    "w": "day's",
+    "t": 14.24
+   },
+   {
+    "w": "value.",
+    "t": 14.85
+   },
+   {
+    "w": "In",
+    "t": 15.62
+   },
+   {
+    "w": "a",
+    "t": 15.82
+   },
+   {
+    "w": "study",
+    "t": 15.92
+   },
+   {
+    "w": "of",
+    "t": 16.43
+   },
+   {
+    "w": "960",
+    "t": 16.61
+   },
+   {
+    "w": "older",
+    "t": 17.5
+   },
+   {
+    "w": "adults,",
+    "t": 17.99
+   },
+   {
+    "w": "about",
+    "t": 18.62
+   },
+   {
+    "w": "one",
+    "t": 19.04
+   },
+   {
+    "w": "serving",
+    "t": 19.23
+   },
+   {
+    "w": "of",
+    "t": 19.77
+   },
+   {
+    "w": "leafy",
+    "t": 19.94
+   },
+   {
+    "w": "greens",
+    "t": 20.3
+   },
+   {
+    "w": "a",
+    "t": 20.8
+   },
+   {
+    "w": "day",
+    "t": 20.97
+   },
+   {
+    "w": "went",
+    "t": 21.38
+   },
+   {
+    "w": "with",
+    "t": 21.63
+   },
+   {
+    "w": "memory",
+    "t": 21.86
+   },
+   {
+    "w": "decline",
+    "t": 22.21
+   },
+   {
+    "w": "like",
+    "t": 22.67
+   },
+   {
+    "w": "being",
+    "t": 22.88
+   },
+   {
+    "w": "11",
+    "t": 23.18
+   },
+   {
+    "w": "years",
+    "t": 23.54
+   },
+   {
+    "w": "younger.",
+    "t": 23.84
+   }
+  ],
+  "n": 41,
+  "wh": 41
+ },
+ {
+  "id": "v3",
+  "t0": 25.4,
+  "dur": 10.671,
+  "text": "One large egg: 147 milligrams of choline, about a quarter of the daily value. Your brain uses choline to make acetylcholine, a messenger for memory.",
+  "words": [
+   {
+    "w": "One",
+    "t": 25.43
+   },
+   {
+    "w": "large",
+    "t": 25.78
+   },
+   {
+    "w": "egg:",
+    "t": 26.79
+   },
+   {
+    "w": "147",
+    "t": 26.98
+   },
+   {
+    "w": "milligrams",
+    "t": 27.84
+   },
+   {
+    "w": "of",
+    "t": 28.75
+   },
+   {
+    "w": "choline,",
+    "t": 28.87
+   },
+   {
+    "w": "about",
+    "t": 29.52
+   },
+   {
+    "w": "a",
+    "t": 29.88
+   },
+   {
+    "w": "quarter",
+    "t": 29.95
+   },
+   {
+    "w": "of",
+    "t": 30.41
+   },
+   {
+    "w": "the",
+    "t": 30.82
+   },
+   {
+    "w": "daily",
+    "t": 30.91
+   },
+   {
+    "w": "value.",
+    "t": 31.18
+   },
+   {
+    "w": "Your",
+    "t": 31.8
+   },
+   {
+    "w": "brain",
+    "t": 32.08
+   },
+   {
+    "w": "uses",
+    "t": 32.42
+   },
+   {
+    "w": "choline",
+    "t": 32.71
+   },
+   {
+    "w": "to",
+    "t": 33.2
+   },
+   {
+    "w": "make",
+    "t": 33.38
+   },
+   {
+    "w": "acetylcholine,",
+    "t": 33.7
+   },
+   {
+    "w": "a",
+    "t": 34.76
+   },
+   {
+    "w": "messenger",
+    "t": 34.82
+   },
+   {
+    "w": "for",
+    "t": 35.42
+   },
+   {
+    "w": "memory.",
+    "t": 35.62
+   }
+  ],
+  "n": 25,
+  "wh": 25
+ },
+ {
+  "id": "v4",
+  "t0": 37.3,
+  "dur": 22.689,
+  "text": "Now, omega-3. By weight, one ounce of walnuts has more than three ounces of salmon: 2.57 grams, against 1.8. But walnut omega-3 is ALA, and your body turns less than 1% of it into DHA, the fat that makes up 15 to 20% of your frontal cortex. Salmon brings 1.24 grams of DHA, ready made.",
+  "words": [
+   {
+    "w": "Now,",
+    "t": 37.33
+   },
+   {
+    "w": "omega-3.",
+    "t": 37.75
+   },
+   {
+    "w": "By",
+    "t": 38.88
+   },
+   {
+    "w": "weight,",
+    "t": 39.04
+   },
+   {
+    "w": "one",
+    "t": 39.72
+   },
+   {
+    "w": "ounce",
+    "t": 39.85
+   },
+   {
+    "w": "of",
+    "t": 40.19
+   },
+   {
+    "w": "walnuts",
+    "t": 40.19
+   },
+   {
+    "w": "has",
+    "t": 40.56
+   },
+   {
+    "w": "more",
+    "t": 40.76
+   },
+   {
+    "w": "than",
+    "t": 41.14
+   },
+   {
+    "w": "three",
+    "t": 41.2
+   },
+   {
+    "w": "ounces",
+    "t": 41.47
+   },
+   {
+    "w": "of",
+    "t": 41.8
+   },
+   {
+    "w": "salmon:",
+    "t": 41.96
+   },
+   {
+    "w": "2.57",
+    "t": 42.64
+   },
+   {
+    "w": "grams,",
+    "t": 44.06
+   },
+   {
+    "w": "against",
+    "t": 44.55
+   },
+   {
+    "w": "1.8.",
+    "t": 45.16
+   },
+   {
+    "w": "But",
+    "t": 46.2
+   },
+   {
+    "w": "walnut",
+    "t": 46.51
+   },
+   {
+    "w": "omega-3",
+    "t": 47.13
+   },
+   {
+    "w": "is",
+    "t": 48.08
+   },
+   {
+    "w": "ALA,",
+    "t": 48.39
+   },
+   {
+    "w": "and",
+    "t": 48.46
+   },
+   {
+    "w": "your",
+    "t": 48.64
+   },
+   {
+    "w": "body",
+    "t": 48.83
+   },
+   {
+    "w": "turns",
+    "t": 49.09
+   },
+   {
+    "w": "less",
+    "t": 49.35
+   },
+   {
+    "w": "than",
+    "t": 49.67
+   },
+   {
+    "w": "1%",
+    "t": 50.2
+   },
+   {
+    "w": "of",
+    "t": 50.25
+   },
+   {
+    "w": "it",
+    "t": 50.45
+   },
+   {
+    "w": "into",
+    "t": 50.58
+   },
+   {
+    "w": "DHA,",
+    "t": 50.9
+   },
+   {
+    "w": "the",
+    "t": 51.34
+   },
+   {
+    "w": "fat",
+    "t": 52.08
+   },
+   {
+    "w": "that",
+    "t": 52.28
+   },
+   {
+    "w": "makes",
+    "t": 52.52
+   },
+   {
+    "w": "up",
+    "t": 52.74
+   },
+   {
+    "w": "15",
+    "t": 53.07
+   },
+   {
+    "w": "to",
+    "t": 53.61
+   },
+   {
+    "w": "20%",
+    "t": 53.69
+   },
+   {
+    "w": "of",
+    "t": 53.74
+   },
+   {
+    "w": "your",
+    "t": 54.34
+   },
+   {
+    "w": "frontal",
+    "t": 54.39
+   },
+   {
+    "w": "cortex.",
+    "t": 54.71
+   },
+   {
+    "w": "Salmon",
+    "t": 55.39
+   },
+   {
+    "w": "brings",
+    "t": 55.92
+   },
+   {
+    "w": "1.24",
+    "t": 56.44
+   },
+   {
+    "w": "grams",
+    "t": 56.9
+   },
+   {
+    "w": "of",
+    "t": 58.18
+   },
+   {
+    "w": "DHA,",
+    "t": 58.46
+   },
+   {
+    "w": "ready",
+    "t": 58.63
+   },
+   {
+    "w": "made.",
+    "t": 58.89
+   }
+  ],
+  "n": 55,
+  "wh": 55
+ },
+ {
+  "id": "v5",
+  "t0": 61.2,
+  "dur": 10.543,
+  "text": "Blueberries carry roughly 120 to 180 milligrams of anthocyanins per 100 grams. For memory, the evidence is promising, but still being studied.",
+  "words": [
+   {
+    "w": "Blueberries",
+    "t": 61.24
+   },
+   {
+    "w": "carry",
+    "t": 62.06
+   },
+   {
+    "w": "roughly",
+    "t": 62.45
+   },
+   {
+    "w": "120",
+    "t": 63.0
+   },
+   {
+    "w": "to",
+    "t": 63.73
+   },
+   {
+    "w": "180",
+    "t": 63.89
+   },
+   {
+    "w": "milligrams",
+    "t": 64.71
+   },
+   {
+    "w": "of",
+    "t": 65.6
+   },
+   {
+    "w": "anthocyanins",
+    "t": 65.75
+   },
+   {
+    "w": "per",
+    "t": 66.63
+   },
+   {
+    "w": "100",
+    "t": 66.85
+   },
+   {
+    "w": "grams.",
+    "t": 67.36
+   },
+   {
+    "w": "For",
+    "t": 68.0
+   },
+   {
+    "w": "memory,",
+    "t": 68.24
+   },
+   {
+    "w": "the",
+    "t": 68.88
+   },
+   {
+    "w": "evidence",
+    "t": 69.11
+   },
+   {
+    "w": "is",
+    "t": 69.73
+   },
+   {
+    "w": "promising,",
+    "t": 69.88
+   },
+   {
+    "w": "but",
+    "t": 70.6
+   },
+   {
+    "w": "still",
+    "t": 70.76
+   },
+   {
+    "w": "being",
+    "t": 71.03
+   },
+   {
+    "w": "studied.",
+    "t": 71.3
+   }
+  ],
+  "n": 22,
+  "wh": 22
+ },
+ {
+  "id": "v6",
+  "t0": 72.9,
+  "dur": 7.286,
+  "text": "So: greens, eggs, fish, a handful of walnuts, and berries. Not a cure. Just better raw material for your brain.",
+  "words": [
+   {
+    "w": "So:",
+    "t": 72.94
+   },
+   {
+    "w": "greens,",
+    "t": 73.08
+   },
+   {
+    "w": "eggs,",
+    "t": 73.81
+   },
+   {
+    "w": "fish,",
+    "t": 74.35
+   },
+   {
+    "w": "a",
+    "t": 74.93
+   },
+   {
+    "w": "handful",
+    "t": 74.98
+   },
+   {
+    "w": "of",
+    "t": 75.42
+   },
+   {
+    "w": "walnuts,",
+    "t": 75.54
+   },
+   {
+    "w": "and",
+    "t": 76.0
+   },
+   {
+    "w": "berries.",
+    "t": 76.31
+   },
+   {
+    "w": "Not",
+    "t": 77.08
+   },
+   {
+    "w": "a",
+    "t": 77.42
+   },
+   {
+    "w": "cure.",
+    "t": 77.56
+   },
+   {
+    "w": "Just",
+    "t": 78.22
+   },
+   {
+    "w": "better",
+    "t": 78.45
+   },
+   {
+    "w": "raw",
+    "t": 78.79
+   },
+   {
+    "w": "material",
+    "t": 78.96
+   },
+   {
+    "w": "for",
+    "t": 79.42
+   },
+   {
+    "w": "your",
+    "t": 79.59
+   },
+   {
+    "w": "brain.",
+    "t": 79.82
+   }
+  ],
+  "n": 20,
+  "wh": 20
+ }
+]
