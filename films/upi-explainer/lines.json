@@ -1,0 +1,11 @@
+[
+ {"id": "l1", "text": "You scan the code, type your PIN, and in a couple of seconds, it's paid. But where did the money actually go?", "voice": "af_heart", "speed": 1.02},
+ {"id": "l2", "text": "Your payment app doesn't hold your money. It's a messenger, linked to a partner bank.", "voice": "af_heart", "speed": 1.02},
+ {"id": "l3", "text": "It sends your request to the U.P.I. switch, run by N.P.C.I., the exchange that connects hundreds of banks.", "voice": "af_heart", "speed": 1.02},
+ {"id": "l4", "text": "The switch asks your bank to check your PIN, which is encrypted so only your bank can read it, and your balance.", "voice": "af_heart", "speed": 1.02},
+ {"id": "l5", "text": "Your bank debits your account.", "voice": "af_heart", "speed": 1.02},
+ {"id": "l6", "text": "Then the switch tells the shop's bank to credit theirs.", "voice": "af_heart", "speed": 1.02},
+ {"id": "l7", "text": "Both apps get a confirmation. Done.", "voice": "af_heart", "speed": 1.02},
+ {"id": "l8", "text": "In September twenty twenty-six, this happened over twenty-four billion times. That's about eight hundred million payments, every single day.", "voice": "af_heart", "speed": 1.02},
+ {"id": "l9", "text": "All on a system launched in April twenty sixteen.", "voice": "af_heart", "speed": 1.0}
+]

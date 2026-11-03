@@ -1,0 +1,4 @@
+# Facts and sources
+- UPI is operated by NPCI under RBI oversight; launched April 2016 (inaugurated 11 April 2016 by RBI Governor Raghuram Rajan; apps public from 25 Aug 2016). Sources: Business Standard/PTI 2016-04-11; NPCI press release; Wikipedia "Unified Payments Interface".
+- Flow: payer app (PSP, backed by a partner bank) → NPCI UPI switch → payer's (issuer) bank verifies the PIN and balance and debits → NPCI → payee's bank credits → both apps notified. The UPI PIN is encrypted with the issuer bank's public key, so only that bank can decrypt it. Sources: Razorpay "What is UPI and how it works"; M2P Fintech "NPCI mapper, switch and PSP".
+- September 2026: 24.07 billion UPI transactions worth ₹29.37 lakh crore (NPCI data, reported 1 Oct 2026). 24.07 bn / 30 days ≈ 802 million per day. The record month is August 2026 at 24.51 bn.

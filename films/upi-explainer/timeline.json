@@ -1,0 +1,584 @@
+[
+ {
+  "id": "l1",
+  "t0": 0.8,
+  "dur": 6.413,
+  "text": "You scan the code, type your PIN, and in a couple of seconds, it's paid. But where did the money actually go?",
+  "words": [
+   {
+    "w": "You",
+    "t": 0.83
+   },
+   {
+    "w": "scan",
+    "t": 1.0
+   },
+   {
+    "w": "the",
+    "t": 1.27
+   },
+   {
+    "w": "code,",
+    "t": 1.47
+   },
+   {
+    "w": "type",
+    "t": 1.93
+   },
+   {
+    "w": "your",
+    "t": 2.36
+   },
+   {
+    "w": "PIN,",
+    "t": 2.82
+   },
+   {
+    "w": "and",
+    "t": 3.2
+   },
+   {
+    "w": "in",
+    "t": 3.46
+   },
+   {
+    "w": "a",
+    "t": 3.55
+   },
+   {
+    "w": "couple",
+    "t": 3.62
+   },
+   {
+    "w": "of",
+    "t": 4.04
+   },
+   {
+    "w": "seconds,",
+    "t": 4.33
+   },
+   {
+    "w": "it's",
+    "t": 4.67
+   },
+   {
+    "w": "paid.",
+    "t": 4.95
+   },
+   {
+    "w": "But",
+    "t": 5.48
+   },
+   {
+    "w": "where",
+    "t": 5.66
+   },
+   {
+    "w": "did",
+    "t": 5.94
+   },
+   {
+    "w": "the",
+    "t": 6.11
+   },
+   {
+    "w": "money",
+    "t": 6.28
+   },
+   {
+    "w": "actually",
+    "t": 6.61
+   },
+   {
+    "w": "go?",
+    "t": 7.04
+   }
+  ],
+  "wh": 22,
+  "n": 22
+ },
+ {
+  "id": "l2",
+  "t0": 8.0,
+  "dur": 4.464,
+  "text": "Your payment app doesn't hold your money. It's a messenger, linked to a partner bank.",
+  "words": [
+   {
+    "w": "Your",
+    "t": 8.03
+   },
+   {
+    "w": "payment",
+    "t": 8.24
+   },
+   {
+    "w": "app",
+    "t": 8.65
+   },
+   {
+    "w": "doesn't",
+    "t": 8.84
+   },
+   {
+    "w": "hold",
+    "t": 9.24
+   },
+   {
+    "w": "your",
+    "t": 9.48
+   },
+   {
+    "w": "money.",
+    "t": 9.72
+   },
+   {
+    "w": "It's",
+    "t": 10.22
+   },
+   {
+    "w": "a",
+    "t": 10.49
+   },
+   {
+    "w": "messenger,",
+    "t": 10.53
+   },
+   {
+    "w": "linked",
+    "t": 11.11
+   },
+   {
+    "w": "to",
+    "t": 11.49
+   },
+   {
+    "w": "a",
+    "t": 11.62
+   },
+   {
+    "w": "partner",
+    "t": 11.68
+   },
+   {
+    "w": "bank.",
+    "t": 12.38
+   }
+  ],
+  "wh": 15,
+  "n": 15
+ },
+ {
+  "id": "l3",
+  "t0": 13.2,
+  "dur": 7.293,
+  "text": "It sends your request to the UPI switch, run by NPCI, the exchange that connects hundreds of banks.",
+  "words": [
+   {
+    "w": "It",
+    "t": 13.23
+   },
+   {
+    "w": "sends",
+    "t": 13.38
+   },
+   {
+    "w": "your",
+    "t": 13.79
+   },
+   {
+    "w": "request",
+    "t": 14.11
+   },
+   {
+    "w": "to",
+    "t": 14.7
+   },
+   {
+    "w": "the",
+    "t": 14.86
+   },
+   {
+    "w": "UPI",
+    "t": 15.27
+   },
+   {
+    "w": "switch,",
+    "t": 15.44
+   },
+   {
+    "w": "run",
+    "t": 16.64
+   },
+   {
+    "w": "by",
+    "t": 17.09
+   },
+   {
+    "w": "NPCI,",
+    "t": 17.68
+   },
+   {
+    "w": "the",
+    "t": 18.3
+   },
+   {
+    "w": "exchange",
+    "t": 18.49
+   },
+   {
+    "w": "that",
+    "t": 19.0
+   },
+   {
+    "w": "connects",
+    "t": 19.21
+   },
+   {
+    "w": "hundreds",
+    "t": 19.65
+   },
+   {
+    "w": "of",
+    "t": 20.07
+   },
+   {
+    "w": "banks.",
+    "t": 20.17
+   }
+  ],
+  "wh": 18,
+  "n": 18
+ },
+ {
+  "id": "l4",
+  "t0": 21.3,
+  "dur": 6.364,
+  "text": "The switch asks your bank to check your PIN, which is encrypted so only your bank can read it, and your balance.",
+  "words": [
+   {
+    "w": "The",
+    "t": 21.34
+   },
+   {
+    "w": "switch",
+    "t": 21.54
+   },
+   {
+    "w": "asks",
+    "t": 22.0
+   },
+   {
+    "w": "your",
+    "t": 22.27
+   },
+   {
+    "w": "bank",
+    "t": 22.57
+   },
+   {
+    "w": "to",
+    "t": 22.9
+   },
+   {
+    "w": "check",
+    "t": 23.07
+   },
+   {
+    "w": "your",
+    "t": 23.39
+   },
+   {
+    "w": "PIN,",
+    "t": 23.69
+   },
+   {
+    "w": "which",
+    "t": 24.08
+   },
+   {
+    "w": "is",
+    "t": 24.36
+   },
+   {
+    "w": "encrypted",
+    "t": 24.48
+   },
+   {
+    "w": "so",
+    "t": 25.03
+   },
+   {
+    "w": "only",
+    "t": 25.13
+   },
+   {
+    "w": "your",
+    "t": 25.4
+   },
+   {
+    "w": "bank",
+    "t": 25.72
+   },
+   {
+    "w": "can",
+    "t": 25.96
+   },
+   {
+    "w": "read",
+    "t": 26.25
+   },
+   {
+    "w": "it,",
+    "t": 26.84
+   },
+   {
+    "w": "and",
+    "t": 26.84
+   },
+   {
+    "w": "your",
+    "t": 27.0
+   },
+   {
+    "w": "balance.",
+    "t": 27.24
+   }
+  ],
+  "wh": 22,
+  "n": 22
+ },
+ {
+  "id": "l5",
+  "t0": 28.4,
+  "dur": 1.549,
+  "text": "Your bank debits your account.",
+  "words": [
+   {
+    "w": "Your",
+    "t": 28.43
+   },
+   {
+    "w": "bank",
+    "t": 28.65
+   },
+   {
+    "w": "debits",
+    "t": 28.96
+   },
+   {
+    "w": "your",
+    "t": 29.28
+   },
+   {
+    "w": "account.",
+    "t": 29.53
+   }
+  ],
+  "wh": 5,
+  "n": 5
+ },
+ {
+  "id": "l6",
+  "t0": 30.8,
+  "dur": 2.552,
+  "text": "Then the switch tells the shop's bank to credit theirs.",
+  "words": [
+   {
+    "w": "Then",
+    "t": 30.86
+   },
+   {
+    "w": "the",
+    "t": 31.02
+   },
+   {
+    "w": "switch",
+    "t": 31.19
+   },
+   {
+    "w": "tells",
+    "t": 31.51
+   },
+   {
+    "w": "the",
+    "t": 31.81
+   },
+   {
+    "w": "shop's",
+    "t": 31.95
+   },
+   {
+    "w": "bank",
+    "t": 32.25
+   },
+   {
+    "w": "to",
+    "t": 32.5
+   },
+   {
+    "w": "credit",
+    "t": 32.63
+   },
+   {
+    "w": "theirs.",
+    "t": 32.98
+   }
+  ],
+  "wh": 10,
+  "n": 10
+ },
+ {
+  "id": "l7",
+  "t0": 34.2,
+  "dur": 2.206,
+  "text": "Both apps get a confirmation. Done.",
+  "words": [
+   {
+    "w": "Both",
+    "t": 34.23
+   },
+   {
+    "w": "apps",
+    "t": 34.46
+   },
+   {
+    "w": "get",
+    "t": 34.72
+   },
+   {
+    "w": "a",
+    "t": 34.93
+   },
+   {
+    "w": "confirmation.",
+    "t": 34.97
+   },
+   {
+    "w": "Done.",
+    "t": 36.0
+   }
+  ],
+  "wh": 6,
+  "n": 6
+ },
+ {
+  "id": "l8",
+  "t0": 38.0,
+  "dur": 8.118,
+  "text": "In September 2026, this happened over 24 billion times. That's about 800 million payments, every single day.",
+  "words": [
+   {
+    "w": "In",
+    "t": 38.03
+   },
+   {
+    "w": "September",
+    "t": 38.21
+   },
+   {
+    "w": "2026,",
+    "t": 38.83
+   },
+   {
+    "w": "this",
+    "t": 39.95
+   },
+   {
+    "w": "happened",
+    "t": 40.29
+   },
+   {
+    "w": "over",
+    "t": 40.96
+   },
+   {
+    "w": "24",
+    "t": 41.3
+   },
+   {
+    "w": "billion",
+    "t": 41.82
+   },
+   {
+    "w": "times.",
+    "t": 42.88
+   },
+   {
+    "w": "That's",
+    "t": 42.88
+   },
+   {
+    "w": "about",
+    "t": 43.26
+   },
+   {
+    "w": "800",
+    "t": 43.58
+   },
+   {
+    "w": "million",
+    "t": 44.16
+   },
+   {
+    "w": "payments,",
+    "t": 44.83
+   },
+   {
+    "w": "every",
+    "t": 45.17
+   },
+   {
+    "w": "single",
+    "t": 45.45
+   },
+   {
+    "w": "day.",
+    "t": 45.84
+   }
+  ],
+  "wh": 17,
+  "n": 17
+ },
+ {
+  "id": "l9",
+  "t0": 48.0,
+  "dur": 2.949,
+  "text": "All on a system launched in April 2016.",
+  "words": [
+   {
+    "w": "All",
+    "t": 48.02
+   },
+   {
+    "w": "on",
+    "t": 48.22
+   },
+   {
+    "w": "a",
+    "t": 48.37
+   },
+   {
+    "w": "system",
+    "t": 48.43
+   },
+   {
+    "w": "launched",
+    "t": 48.88
+   },
+   {
+    "w": "in",
+    "t": 49.47
+   },
+   {
+    "w": "April",
+    "t": 49.62
+   },
+   {
+    "w": "2016.",
+    "t": 49.99
+   }
+  ],
+  "wh": 8,
+  "n": 8
+ }
+]
