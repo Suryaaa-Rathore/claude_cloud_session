@@ -1,0 +1,6 @@
+# Facts (claim → source → wording)
+- US 149,797, E. W. Siemens, "Magneto-Electric Apparatus", patented 14 April 1874 (filed 20 Jan 1874): "O is a coil of electric conducting-wire suspended in the annular space between S and N" · "alternating currents cause the coil to vibrate up and down". Source: patentimages.storage.googleapis.com/pdfs/US149797.pdf
+- US 1,707,570, C. W. Rice, assignor to General Electric, "Loud-Speaker", filed 20 April 1925, patented 2 April 1929: "a diaphragm 1 of conical form" · "Coil 7 is disposed in the annular air gap 8" · "a spider 13 … these arms … will substantially prevent all lateral movement of the coil 7". Source: …/pdfs/US1707570.pdf
+- US 2,490,466, H. F. Olson and J. Preston, assignors to Radio Corporation of America, filed 19 July 1944, patented 6 Dec 1949: "Heretofore the usual type of flexible suspension for the base of a frusto-conical acoustic diaphragm has consisted in an annularly corrugated fibrous support rim" · stiffness "with the result that the range of low frequency response has been limited". Source: …/pdfs/US2490466.pdf
+- Inference (labelled *schematic / typical*): the modern assembly order (motor → frame → spider → voice coil into gap → cone → surround → dust cap) is a generic description of dynamic-driver construction, not taken from these patents.
+- "Over 150 years": 1874 → 2026 = 152 years.

@@ -24,3 +24,5 @@ tools/hyperframes/*/lyrics_dp.json
 films/*/out/
 films/*/stills/
 films/*/voice/*.16k.wav*
+films/*/raw/
+films/*/src/

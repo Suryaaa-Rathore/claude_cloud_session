@@ -1,0 +1,38 @@
+[
+ {
+  "id": "v1",
+  "text": "Every speaker, in your phone or in a concert hall, is built from the same few parts. The blueprints are on file.",
+  "voice": "am_michael",
+  "speed": 1.0
+ },
+ {
+  "id": "v2",
+  "text": "April, eighteen seventy-four. Werner Siemens files a patent for a coil of wire, suspended in the narrow gap of a magnet. Alternating currents, he writes, cause the coil to vibrate up and down.",
+  "voice": "am_michael",
+  "speed": 1.04
+ },
+ {
+  "id": "v3",
+  "text": "April, nineteen twenty-five. At General Electric, Chester Rice fixes the coil to a diaphragm of conical form, and adds a spider, to stop the coil moving sideways in the gap.",
+  "voice": "am_michael",
+  "speed": 1.04
+ },
+ {
+  "id": "v4",
+  "text": "By nineteen forty-four, the cone's edge sat on a corrugated rim. At R C A, Harry Olson files a softer one, for deeper bass.",
+  "voice": "am_michael",
+  "speed": 1.04
+ },
+ {
+  "id": "v5",
+  "text": "A modern speaker goes together in roughly that order. Magnet. Frame. Spider. The coil into the gap. The cone. The surround.",
+  "voice": "am_michael",
+  "speed": 1.0
+ },
+ {
+  "id": "v6",
+  "text": "One idea, over a hundred and fifty years old. Current, in a coil, in a magnet, moving air.",
+  "voice": "am_michael",
+  "speed": 0.98
+ }
+]
